@@ -1,14 +1,43 @@
-<ion-header>
+<ion-header color="blue">
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Sistema de Autobuses
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+
+  <ion-item (click)="showalert()">
+    <ion-icon name="pin" slot="start"></ion-icon>
+    <ion-label>Ver Paradas cercanas</ion-label>
+  </ion-item>
+  <br>
+  <br>
+  <div *ngFor='let info of info'>
+    <ion-card class="card-prop"> 
+      <ion-item>
+          <ion-icon name="bus"></ion-icon>
+          <div class="card-info">
+              <h2> Ruta {{info.rutaNumber}}</h2> 
+              <ion-label style="margin-bottom: 12px;"> 
+                <ion-icon name="walk" slot="start"></ion-icon> 
+                  Llega en {{info.minutes}} minutos aprox.
+                </ion-label>  
+          </div>
+        </ion-item>
+    </ion-card>
   </div>
 </ion-content>
+
+  <ion-footer>
+    <ion-card>
+      <div style="margin-left: 15px;">
+          <h5 style="font-size: smaller;">  Esto hay por tu zona:</h5>
+      </div>
+      <div class="image-container">
+          <img src="{{ads[ad]}}" alt="">
+      </div>
+      
+    </ion-card> 
+  </ion-footer>
