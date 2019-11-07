@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "heroku-postbuild": "npm run ionic:build:prod"
+    "heroku-postbuild": "npm run ionic:build:prod",
+    "ionic:build:prod": "ionic-app-scripts build -- --prod"
   },
   "private": true,
   "dependencies": {
