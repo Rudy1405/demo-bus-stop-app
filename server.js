@@ -14,7 +14,7 @@ app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Methods', 'DELETE, PUT');
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
-});
+}); 
  
 app.use(express.static('www'));
 app.set('port', process.env.PORT || 5000);
