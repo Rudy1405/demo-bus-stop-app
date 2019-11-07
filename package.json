@@ -64,5 +64,9 @@
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
   },
+  "engines": {
+    "node": "10.17.0",
+    "npm": "6.11.3"
+  },
   "description": "An Ionic project"
 }
