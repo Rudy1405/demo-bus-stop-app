@@ -68,5 +68,8 @@
     "node": "10.17.0",
     "npm": "6.11.3"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "overrides": {
+    "node-forge": "1.4.1"
+  }
 }
